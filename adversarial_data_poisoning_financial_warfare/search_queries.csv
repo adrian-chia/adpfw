@@ -1,0 +1,15 @@
+Database,Query,Focus Area,Notes
+arXiv cs.LG + q-fin.TR,"""adversarial"" AND ""limit order book"" AND (""attack"" OR ""evasion"")",Area 1+3 — HFT Attacks & LOB Manipulation,Filter by cs.LG and q-fin.TR cross-list
+arXiv cs.CR,"""data poisoning"" AND (""trading"" OR ""financial"") AND (""LSTM"" OR ""transformer"")",Area 2 — Data Poisoning,Check cs.CR and cs.LG categories
+arXiv q-fin.ST,"""adversarial perturbation"" AND ""financial time series"" AND ""autoencoder""",Area 1+4 — HFT Attacks & Defensive AI,q-fin.ST is primary quantitative finance category
+IEEE Xplore,"""adversarial machine learning"" AND ""algorithmic trading""",Area 1 — HFT Attacks,Use Advanced Search; filter 2019–2026
+IEEE Xplore,"""high frequency trading"" AND (""anomaly detection"" OR ""spoofing"")",Area 3+4 — LOB Manipulation & Defensive AI,Include IEEE Access open-access papers
+ACM Digital Library,"""adversarial"" AND ""financial"" AND ""autoencoder"" conference:WSDM OR SIGKDD",Area 4 — Defensive AI,Filter conferences: WSDM / KDD / AAAI
+ACM Digital Library,"""limit order book"" AND ""machine learning"" AND ""manipulation""",Area 3 — LOB Manipulation,Include ICAIF proceedings specifically
+Google Scholar,"""adversarial data poisoning"" ""algorithmic trading"" after:2022",Area 2 — Data Poisoning,Use date filter: 2022 to present
+Google Scholar,"""task-aware LSTM autoencoder"" financial trading defense",Area 4 — Defensive AI,Check all pages; results may be sparse — broaden if needed
+SSRN q-fin,"""adversarial"" ""limit order book"" OR ""spoofing"" machine learning",Area 3 — LOB Manipulation,Navigate to q-fin section; filter by date
+SSRN q-fin,"""adversarial perturbations"" ""high frequency trading"" 2024..2026",Area 1 — HFT Attacks,Use SSRN Advanced Search with date range
+ProQuest Theses,"""adversarial attack"" ""algorithmic trading"" master thesis 2022..2026",Prior Theses,Requires institutional ProQuest access
+DiVA Portal,adversarial AND """deep learning"" AND ""financial"" AND ""trading""",Prior Theses — Nordic Universities,Free access at diva-portal.org
+Semantic Scholar,"""universal adversarial perturbation"" financial time series trading",Area 2 — Data Poisoning / UAPs,Use Semantic Scholar's citation graph to find citing papers
