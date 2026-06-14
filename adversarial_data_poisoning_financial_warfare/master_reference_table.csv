@@ -5,7 +5,7 @@ F.3,Adversarial Attacks on DNN for TS Classification,"Fawaz, Forestier et al.",2
 F.4,Adversarial Attacks on Time Series (ATN),"Karim, Majumdar, Darabi",2021,IEEE TPAMI,Important (2-star),Foundation,https://ieeexplore.ieee.org/document/9008005
 F.5,Artificial Intelligence and Systemic Risk,"Danielsson, Macrae, Uthemann",2022,Journal of Banking & Finance,Important (2-star),Foundation,https://doi.org/10.1016/j.jbankfin.2022.106290
 1.1,Adversarial Attacks on Machine Learning Systems for High-Frequency Trading,Goldblum et al.,2021,ACM ICAIF,Critical (3-star),Area 1 — HFT Attacks,https://arxiv.org/abs/2002.09565
-1.2,Taking Over the Stock Market: Adversarial Perturbations Against Algorithmic Traders,"Nehemya, Mathov, Shabtai, Elovici",2021,ECML PKDD,Critical (3-star),Area 1 — HFT Attacks,https://arxiv.org/abs/2010.09246
+1.2,"Taking Over the Stock Market: Adversarial Perturbations Against Algorithmic Traders","Nehemya, Mathov, Shabtai, Elovici",2021,ECML PKDD,Critical (3-star),Area 1 — HFT Attacks,https://arxiv.org/abs/2010.09246
 1.3,The Ephemeral Threat: Assessing the Security of Algorithmic Trading Systems,"Rizvani, Apruzzese, Laskov",2025,ACM CODASPY,Critical (3-star),Area 1 — HFT Attacks,https://arxiv.org/abs/2505.10430
 1.4,Adversarial Attacks on Deep Algorithmic Trading Policies,"Faghan, Pierson, Behzadan, Fathi",2020,arXiv,Critical (3-star),Area 1 — HFT Attacks,https://arxiv.org/abs/2010.11388
 1.5,Adversarial News and Lost Profits: Manipulating Headlines in LLM-Driven Algorithmic Trading,"Rizvani, Apruzzese, Laskov",2026,IEEE SaTML,Important (2-star),Area 1 — HFT Attacks,https://arxiv.org/abs/2601.07722
@@ -13,17 +13,22 @@ F.5,Artificial Intelligence and Systemic Risk,"Danielsson, Macrae, Uthemann",202
 1.7,Targeted Manipulation: Slope-Based Attacks on Financial Time-Series Data,Multiple,2025,arXiv,Important (2-star),Area 1 — HFT Attacks,https://arxiv.org/abs/2511.19330
 1.8,Adversarial-Robust DRL for High-Frequency Cryptocurrency Trading with XAI Framework,Sinha et al.,2025,ResearchGate Preprint,Important (2-star),Area 1 — HFT Attacks,Search ResearchGate by title
 1.9,Conditional Adversarial Fragility in Financial ML under Macroeconomic Stress,Baviskar,2025,arXiv,Important (2-star),Area 1 — HFT Attacks,https://arxiv.org/abs/2512.19935
-1.10,TradeTrap: Are LLM-based Trading Agents Truly Reliable and Faithful?,Wen et al.,2025,arXiv,Important (2-star),Area 1 — HFT Attacks,https://arxiv.org/abs/2512.02261
+1.10,"TradeTrap: Are LLM-based Trading Agents Truly Reliable and Faithful?",Wen et al.,2025,arXiv,Important (2-star),Area 1 — HFT Attacks,https://arxiv.org/abs/2512.02261
 1.11,Robust Market Making via Adversarial Reinforcement Learning,"Spooner, Savani",2020,IJCAI,Important (2-star),Area 1 — Defense,https://arxiv.org/abs/2003.01820
-1.12,When Hallucination Costs Millions: Benchmarking AI Agents in Adversarial Financial Markets,Multiple,2025,arXiv,Important (2-star),Area 1 — HFT Attacks,https://arxiv.org/abs/2510.00332
-1.13,When Milliseconds Matter: Evaluating Vulnerability of HFT Models to Adversarial Manipulation (MSc Thesis),Chakraborty,2025,MSc Thesis — Penn State University,Contextual (1-star),Prior Thesis,https://etda.libraries.psu.edu
+1.12,"When Hallucination Costs Millions: Benchmarking AI Agents in Adversarial Financial Markets",Multiple,2025,arXiv,Important (2-star),Area 1 — HFT Attacks,https://arxiv.org/abs/2510.00332
+1.13,"When Milliseconds Matter: Evaluating Vulnerability of HFT Models to Adversarial Manipulation (MSc Thesis)",Chakraborty,2025,MSc Thesis — Penn State University,Contextual (1-star),Prior Thesis,https://etda.libraries.psu.edu
 1.14,Adversarial Robustness Testing of DRL Based Automated Trading Software (MSc Thesis),Anonymous,2022,MSc Thesis — University of Lethbridge,Contextual (1-star),Prior Thesis,https://scholaris.ca
 2.1,SleeperNets: Universal Backdoor Poisoning Attacks Against Reinforcement Learning Agents,"Rathbun, Amato, Oprea",2024,NeurIPS 2024,Critical (3-star),Area 2 — Data Poisoning,https://arxiv.org/abs/2405.20539
 2.2,Trading Devil RL: Backdoor Attack via Stock Market Bayesian Optimization and Reinforcement Learning,Mengara,2024,arXiv,Critical (3-star),Area 2 — Data Poisoning,https://arxiv.org/abs/2412.17908
 2.3,Trading Devil: Robust Backdoor Attack via Stochastic Investment Models and Bayesian Approach,Mengara,2024,arXiv,Important (2-star),Area 2 — Data Poisoning,https://arxiv.org/abs/2406.10719
 2.4,Adversarial Robustness in Financial ML: Defenses Economic Impact and Governance Evidence,Multiple,2025,arXiv,Important (2-star),Area 2 — Data Poisoning,https://arxiv.org/abs/2512.15780
+2.5,Adversarial ML Attacks on Financial Reporting (MVMO),"Raff, Kukla, Benaroch, Comprix",2025,arXiv,Important (2-star),Area 2 — Data Poisoning,https://arxiv.org/abs/2507.05441
 2.6,ML Attack Models: Adversarial Attacks and Data Poisoning Attacks,Multiple,2021,arXiv,Important (2-star),Area 2 — Data Poisoning,https://arxiv.org/abs/2112.02797
-2.7,When AI Meets Wall Street: A Survey on Trustworthy AI in Fintech,"Zeng, Zhao, Yang et al.",2026,arXiv,Contextual (1-star),Area 2 — Survey,https://arxiv.org/abs/2605.30650
+2.7,"When AI Meets Wall Street: A Survey on Trustworthy AI in Fintech","Zeng, Zhao, Yang et al.",2026,arXiv,Contextual (1-star),Area 2 — Survey,https://arxiv.org/abs/2605.30650
+2.8,Adversarial Bias: Data Poisoning Attacks on Fairness,Not specified,2025,arXiv,Contextual (1-star),Area 2 — Data Poisoning,https://arxiv.org/abs/2511.08331
+2.9,Data Poisoning 2018-2025: A Systematic Review of Risks,IACIS,2025,IACIS,Contextual (1-star),Area 2 — Data Poisoning,https://iacis.org/iis/2025/4_iis_2025_433-442.pdf
+2.10,Adversarial Training for Defense Against Label Poisoning Attacks (Floral),"Bal, Cevher, Muehlebach",2025,ICLR 2025,Important (2-star),Area 2 — Data Poisoning,https://openreview.net/forum?id=UlpkHciYQP
+2.11,Robust Universal Adversarial Perturbations (ICML 2024),Xu et al.,2024,ICML 2024 (PMLR 235),Important (2-star),Area 2 — Data Poisoning,https://proceedings.mlr.press/v235/xu24v.html
 3.1,Detecting Multilevel Manipulation from Limit Order Book via Cascaded Contrastive Representation Learning,"Lin, Yang",2025,arXiv,Critical (3-star),Area 3 — LOB Manipulation,https://arxiv.org/abs/2508.17086
 3.2,Learning the Spoofability of Limit Order Books with Interpretable Probabilistic Neural Networks,"Fabre, Challet",2025-2026,SSRN/arXiv,Critical (3-star),Area 3 — LOB Manipulation,Search SSRN: spoofability limit order book probabilistic neural
 3.3,Conspiracy Spoofing Orders Detection with Transformer-Based Deep Graph Learning,Kang et al.,2023,IEEE,Important (2-star),Area 3 — LOB Manipulation,https://arxiv.org/search/?query=conspiracy+spoofing+transformer+graph
@@ -38,9 +43,20 @@ F.5,Artificial Intelligence and Systemic Risk,"Danielsson, Macrae, Uthemann",202
 4.5,Adversarial Contrastive Autoencoder for Multivariate Time-Series Anomaly Detection,Meng et al.,2024,arXiv,Important (2-star),Area 4 — Defensive AI,https://arxiv.org/search/?query=adversarial+contrastive+autoencoder+multivariate+time+series+anomaly
 4.6,Transformer-Based Autoencoders for Limit Order Book Anomaly Detection,Multiple,2024-2025,preprints.org,Important (2-star),Area 4 — Defensive AI,https://preprints.org
 4.7,Temporal Adversarial Attacks on Time Series and RL Systems: A Systematic Survey Taxonomy and Benchmarking Roadmap,"Kurniawan, Putra, Hakim, Ariyanto",2026,preprints.org,Contextual (1-star),Area 4 — Defensive AI,https://preprints.org
+4.8,Robust Anomaly Detection in Financial Markets Using LSTM Autoencoders and GNN,Not specified,2025,Opast Publishers (Open Access),Important (2-star),Area 4 — Defensive AI,https://www.opastpublishers.com/open-access-articles/robust-anomaly-detection-in-financial-markets-using-lstm-autoencoders-and-g
+4.9,LAC: LSTM Autoencoder with Community for Insider Threat Detection,NISER,2020,arXiv,Contextual (1-star),Area 4 — Defensive AI,https://arxiv.org/abs/2008.05646
+4.10,Deep Learning for Time Series Anomaly Detection: A Survey,Not specified,2024,arXiv,Important (2-star),Area 4 — Defensive AI,https://arxiv.org/abs/2211.05244
+4.11,Explaining Anomalies using Denoising Autoencoders for Financial Supervision,Deutsche Bundesbank,2023,Deutsche Bundesbank Research Paper,Contextual (1-star),Area 4 — Defensive AI,https://www.bundesbank.de/resource/blob/903324/5204f06be1056df6f14f5eebccbf622e/mL/2023-01-explaining-data.pdf
 R.1,The Financial Stability Implications of Artificial Intelligence,Financial Stability Board (FSB),2024,Regulatory Report,Critical (3-star),Policy / Regulatory,https://www.fsb.org/2024/
 R.2,Global Financial Stability Report — AI and Financial Markets Chapter,International Monetary Fund (IMF),2024,Policy Report,Critical (3-star),Policy / Regulatory,https://www.imf.org/en/Publications/GFSR
+R.3,ABS Red Team Adversarial Attack Simulation Exercise Guidelines,Association of Banks in Singapore (ABS),2024,ABS Industry Guideline,Important (2-star),Policy / Regulatory — Singapore,https://www.abs.org.sg/docs/library/abs-red-team-adversarial-attack-simulation-exercises-guidelines----september-2024.pdf
 R.4,BIS Working Papers on AI and Financial Stability,Bank for International Settlements (BIS),2023-2025,Working Papers,Important (2-star),Policy / Regulatory,https://www.bis.org/research
+R.5,MAS FEAT Principles: Fairness Ethics Accountability Transparency in AI,Monetary Authority of Singapore (MAS),2019,MAS Policy Paper,Important (2-star),Policy / Regulatory — Singapore,https://www.mas.gov.sg/~/media/MAS/News%20and%20Publications/Monographs%20and%20Information%20Papers/FEAT%20Principles%20Final.pdf
+R.6,Battle of Transformers: Adversarial Attacks on Financial Sentiment Models,Not specified,2024,SSRN,Contextual (1-star),Area 1 — HFT Attacks,https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4977483
 S.1,TARNet: Task-Aware Reconstruction for Time-Series Transformer,"Chowdhury, Zhang, Shang, Gupta, Hong",2022,ACM KDD 2022,Important (2-star),Area 4 — Defensive AI,https://dl.acm.org/doi/10.1145/3534678.3539329
 S.2,Adversarial Vulnerabilities in Large Language Models for Time Series Forecasting,Jiang et al.,2025,AISTATS 2025,Important (2-star),Area 1 — HFT Attacks,https://arxiv.org/abs/2412.08099
 S.3,Learning Not to Spoof,Byrd,2022,ACM ICAIF 2022,Important (2-star),Area 3 — LOB Manipulation,https://dl.acm.org/doi/10.1145/3533271.3561706
+T.1,Robust AI: Security and Privacy Issues in Machine Learning (PhD Thesis — NTU),Nandish Chattopadhyay,2022,PhD Thesis — Nanyang Technological University (DR-NTU),Contextual (1-star),Prior Thesis — Singapore,https://dr.ntu.edu.sg/handle/10356/165248
+T.2,Towards Reliable ML: Data Attribution and Adversarial Robustness (PhD Thesis — SMU),Xiaosen Zheng,2025,PhD Thesis — Singapore Management University (INK Library),Contextual (1-star),Prior Thesis — Singapore,https://ink.library.smu.edu.sg/etd_coll/766/
+T.3,An Adversarial Attack Approach on Financial LLMs (MSc Thesis),Aysun Can Turetken,2025,MSc Thesis,Contextual (1-star),Prior Thesis,https://plexusinvestments.com/site/wp-content/uploads/2025/08/Master_Thesis_Aysun_CanTuretken-1.pdf
+T.4,Adversarial Attacks on Machine Learning for High-Frequency Trading (PhD Dissertation),Chakraborty (UMD),2023,PhD Dissertation — University of Maryland (DRUM),Contextual (1-star),Prior Thesis,https://drum.lib.umd.edu/bitstreams/67afa3c8-0eb9-4ff4-9f44-05e49377c82d/download
