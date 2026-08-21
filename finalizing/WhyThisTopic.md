@@ -1,0 +1,8 @@
+**Thesis Topic:** Securing FinTech API Login Endpoints Against "Low and Slow" Botnets  
+**Why I Selected This Topic:**
+
+* **Strategic Use of Infrastructure Expertise:** This research draws on my background in system, network, and cloud administration, as well as DevOps. Implementing an adaptive defense requires understanding how APIs work, how they are deployed, and how CI/CD pipelines operate.  
+* **Applying Data Science to Digital Security:** The project uses my data science background and programming skills in Python and SQL to analyze large telemetry datasets. I will build an API Gateway throttling algorithm that combines device fingerprinting, TLS fingerprinting, and request-header analysis to distinguish between human users and botnets.  
+* **Addressing a Critical Vulnerability:** Attackers are moving away from noisy DDoS attacks that trigger alarms. Instead, they use AI-driven botnets that rotate through thousands of IP addresses to test stolen credentials at slow rates. This method bypasses standard API Gateway rate limits.  
+* **Feasibility and Research Execution:** The environment is straightforward to simulate. Instead of relying only on existing datasets, I can build a login endpoint and write a Python script that uses rotating proxy IP addresses to generate targeted logs of "low and slow" credential stuffing.  
+* **Industry and Career Alignment:** During my brainstorming and research on the various thesis topics, I have learned that the financial sector handles large, high-velocity datasets and is a common target for attackers. Securing APIs fits the infrastructure demands of Cloud/DevSecOps teams at major FinTechs.
