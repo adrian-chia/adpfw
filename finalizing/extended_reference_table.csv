@@ -1,0 +1,4 @@
+ID,Title (Short),Authors,Year,Venue,Priority,Area,Link
+E.1,Eliminating Credential Stuffing Attack Surfaces: A Compar...,"Harsh Kumar, Isha Singh, Aakanksha Singh et al.",2026,Various Academic Platforms,Important (2-star),Credential Stuffing,https://doi.org/10.2139/ssrn.6576013
+E.2,Adaptive Anomaly Detection Algorithm for Real-Time Identi...,"Nilufar Madaminova, Akram Maxammatov, Svetlana Sadchikova et al.",2026,Journal of Internet Services and Information Security,Important (2-star),Credential Stuffing,https://doi.org/10.58346/jisis.2026.i2.013
+E.3,HTTP Low and Slow DoS Attack Detection using LSTM based d...,"Bronjon Gogoi, Tasiruddin Ahmed",2022,2022 IEEE 19th India Council International Conference (INDICON),Important (2-star),Botnet Detection & ML,https://doi.org/10.1109/indicon56171.2022.10039772

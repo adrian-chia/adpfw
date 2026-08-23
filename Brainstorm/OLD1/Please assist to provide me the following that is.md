@@ -1,20 +1,3 @@
-![perplexity]()
-
-# Please assist to provide me the following that is related to each individual Topic below, do not combine the topics, or lump them together:
-
-1. Provide an overview of the @topic.
-2. Develop thesis statements related to the @topic.
-3. Conduct a literature review to support the thesis statements.
-
-#######################
-@Topics
-"15. Self-learning systems"
-"20. Access control"
-"19. Web security"
-#######################
-It must follow and relate to the topic I'm researching for below.
-#######################
-
 **1. Securing the Open Banking & API Ecosystem**
 
 The financial world has shifted from isolated ecosystems to "Open Banking." Apps like Plaid, Venmo, and budgeting tools constantly pull data from traditional banks via APIs.
