@@ -4,7 +4,7 @@
 
 *   **Title:** *When Handshakes Tell the Truth: Detecting Web Bad Bots via TLS Fingerprints*
 *   **Authors:** Ghalia Jarad, Kemal Bicakci
-*   **Methodology and Findings:** Automated traffic now exceeds human-generated traffic on the web, and much of it is malicious. Because evasive bots can solve Captchas and mimic human interaction, the authors propose a protocol-level detection method using JA4 TLS fingerprinting. They trained two gradient-boosted classifiers (XGBoost and CatBoost) on the JA4DB dataset. The CatBoost model achieved an AUC of 0.998, an F1 score of 0.9734, and 0.9863 accuracy on the test set, with XGBoost performing similarly. The JA4 components ja4_b, cipher_count, and ext_count were the most predictive features. The authors plan to extend this method to HTTP/3 and incorporate additional device-fingerprinting features to evaluate resistance to advanced evasion tactics.
+*   **Methodology and Findings:** Automated traffic now exceeds human-generated traffic on the web, and much of it is malicious. Because evasive bots can solve Captchas and mimic human interaction, the authors propose a protocol level detection method using JA4 TLS fingerprinting. They trained two gradient boosted classifiers (XGBoost and CatBoost) on the JA4DB dataset. The CatBoost model achieved an AUC of 0.998, an F1 score of 0.9734, and 0.9863 accuracy on the test set, with XGBoost performing similarly. The JA4 components ja4_b, cipher_count, and ext_count were the most predictive features. The authors plan to extend this method to HTTP/3 and incorporate additional device-fingerprinting features to evaluate resistance to advanced evasion tactics.
 *   **Link:** http://arxiv.org/abs/2602.09606v1
 *   **Link to Article:** [PDF](/finalizing/papers/R.1_When_Handshakes_Tell_the_Truth_Detecting_Web_Bad_Bots_via_TLS_Fingerprints.pdf)
 
@@ -20,7 +20,7 @@
 
 *   **Title:** *Positional-Unigram Byte Models for Generalized TLS Fingerprinting*
 *   **Authors:** Hector A. Valdez, Sean McPherson
-*   **Methodology and Findings:** The authors present a TLS fingerprinting method based on positional-unigram byte models and maximum likelihood estimation. It models TLS client hello traffic for specific client applications. When fingerprinting a connection, the system calculates the likelihood against its models and selects the application that maximizes this function. This data-driven approach avoids side-channel information and supports on-the-fly updates. Testing on an internal dataset showed the method is robust to cipher stunting, maintaining an unbiased $f_{1}$ score even as synthetic randomization increased.
+*   **Methodology and Findings:** The authors present a TLS fingerprinting method based on positional unigram byte models and maximum likelihood estimation. It models TLS client hello traffic for specific client applications. When fingerprinting a connection, the system calculates the likelihood against its models and selects the application that maximizes this function. This data driven approach avoids side-channel information and supports on the fly updates. Testing on an internal dataset showed the method is robust to cipher stunting, maintaining an unbiased F1 score even as synthetic randomization increased.
 *   **Link:** http://arxiv.org/abs/2405.07848v1
 *   **Link to Article:** [PDF](/finalizing/papers/R.3_Positional-Unigram_Byte_Models_for_Generalized_TLS_Fingerprinting.pdf)
 
@@ -28,14 +28,14 @@
 
 *   **Title:** *Accurate TLS Fingerprinting using Destination Context and Knowledge Bases*
 *   **Authors:** Blake Anderson, David McGrew
-*   **Methodology and Findings:** Network fingerprinting relies on identifying applications from traffic, but TLS encryption prevents methods based on clear-text data. While existing TLS techniques extract a fingerprint string from the client_hello message, hundreds of processes can produce the same string. To fix this, the authors built a system that adds destination context—specifically the destination address, port, and server name—to the fingerprint. By using a weighted naive Bayes classifier, this destination context disambiguates the processes and improves fingerprinting performance.
+*   **Methodology and Findings:** Network fingerprinting relies on identifying applications from traffic, but TLS encryption prevents methods based on clear text data. While existing TLS techniques extract a fingerprint string from the client_hello message, hundreds of processes can produce the same string. To fix this, the authors built a system that adds destination context specifically the destination address, port, and server name to the fingerprint. By using a weighted naive Bayes classifier, this destination context disambiguates the processes and improves fingerprinting performance.
 *   **Link:** http://arxiv.org/abs/2009.01939v1
 *   **Link to Article:** [PDF](/finalizing/papers/R.4_Accurate_TLS_Fingerprinting_using_Destination_Context_and_Knowledge_Bases.pdf)
 
 **R.5**
 
 *   **Title:** *Adaptive Anomaly Detection Algorithm for Real-Time Identification of Phishing and Credential Stuffing Attacks in E-Learning Systems Using Deep Reinforcement Learning*
-*   **Authors:** Nilufar Madaminova, Akram Maxammatov, Svetlana Sadchikova et al.
+*   **Authors:** Nilufar Madaminova, Akram Maxammatov, Svetlana Sadchikova, Gulbakhor Altibaeva, Mahzuna Hamdamova, Zokir Alimov, Sadoqat Jurayeva
 *   **Methodology and Findings:** E-learning platforms and cloud-based LMS face a growing risk of phishing and credential stuffing attacks targeting user authentication. Traditional intrusion detection and static machine learning struggle to adapt to dynamic attack patterns, often generating high false positive rates. The authors propose an Adaptive Anomaly Detection Algorithm using Deep Reinforcement Learning (DRL) to identify these attacks in real time. The algorithm monitors behavioral features like failed login attempts, IP change rates, session lengths, URL reputation, and device mismatch. Tested on a dataset of 125,000 instances containing both malicious and legitimate actions, the DRL model achieved 98.4% accuracy, 98.1% precision, 97.8% recall, and an F1-score of 97.9%, with a 1.9% false positive rate. This outperformed SVM, Random Forest, CNN, and LSTM models on the same data.
 *   **Link:** https://doi.org/10.58346/jisis.2026.i2.013
 *   **Link to Article:** [PDF](/finalizing/papers/R.5_Adaptive_Anomaly_Detection_Algorithm.pdf)
@@ -44,15 +44,15 @@
 
 *   **Title:** *HTTP Low and Slow DoS Attack Detection using LSTM based deep learning*
 *   **Authors:** Bronjon Gogoi, Tasiruddin Ahmed
-*   **Methodology and Findings:** The authors built a multi-layer LSTM network to detect HTTP low and slow DoS attacks. They combined the CIC DoS (2017) dataset with synthetic attack data to increase training volume. After extracting timestamps and IP addresses from PCAP files to separate attack traces from benign traffic, they converted the traffic into time-series sequences of request rates. The resulting LSTM model achieved an accuracy and AUC of 0.99, with false positive and false negative rates around 0.01. The model's loss curves show proper convergence without significant overfitting.
+*   **Methodology and Findings:** The authors built a multi-layer LSTM network to detect HTTP low and slow DoS attacks. They combined the CIC DoS (2017) dataset with synthetic attack data to increase training volume. After extracting timestamps and IP addresses from PCAP files to separate attack traces from benign traffic, they converted the traffic into time series sequences of request rates. The resulting LSTM model achieved an accuracy and AUC of 0.99, with false positive and false negative rates around 0.01. The model's loss curves show proper convergence without significant overfitting.
 *   **Link:** https://doi.org/10.1109/indicon56171.2022.10039772
 *   **Link to Article:** [PDF](/finalizing/papers/R.6_HTTP_Low_and_Slow_DoS_Attack_Detection.pdf)
 
 **R.7**
 
 *   **Title:** *Eliminating Credential Stuffing Attack Surfaces: A Comparative Analysis of OAuth 2.0 and Password-Based Authentication*
-*   **Authors:** Harsh Kumar, Isha Singh, Aakanksha Singh et al.
-*   **Methodology and Findings:** Credential stuffing attacks account for 24% of global security breaches. While rate limiting and challenge-response systems harden traditional password-based authentication, they do not eliminate the risk. This study compared the resilience of traditional authentication against OAuth 2.0 federated identity during a credential stuffing attack. The authors set up a testbed with both endpoints and tested 101 compromised credential pairs. Traditional authentication blocked 100 out of 101 attempts. OAuth 2.0 blocked all 101 attempts because its delegated architecture removes the credential submission surface entirely. OAuth 2.0 also returned responses 2.27% faster, contradicting assumptions about delegation overhead.
+*   **Authors:** Harsh Kumar, Isha Singh, Aakanksha Singh, Vishal Tiwari, Isha Sharma.
+*   **Methodology and Findings:** Credential stuffing attacks account for 24% of global security breaches. While rate limiting and challenge response systems harden traditional password based authentication, they do not eliminate the risk. This study compared the resilience of traditional authentication against OAuth 2.0 federated identity during a credential stuffing attack. The authors set up a testbed with both endpoints and tested 101 compromised credential pairs. Traditional authentication blocked 100 out of 101 attempts. OAuth 2.0 blocked all 101 attempts because its delegated architecture removes the credential submission surface entirely. OAuth 2.0 also returned responses 2.27% faster, contradicting assumptions about delegation overhead.
 *   **Link:** https://doi.org/10.2139/ssrn.6576013
 *   **Link to Article:** [PDF](/finalizing/papers/R.7_Eliminating_Credential_Stuffing_Attack_Surfaces.pdf)
 
@@ -92,7 +92,7 @@
 
 *   **Title:** *Comprehensive Survey on Adversarial Examples in Cybersecurity: Impacts, Challenges, and Mitigation Strategies*
 *   **Authors:** Li Li
-*   **Methodology and Findings:** Adversarial examples (AE) can deceive deep learning models through subtle perturbations, causing misclassification and system vulnerabilities in cybersecurity tools. This paper reviews how AE attacks affect malware detection, botnet identification, intrusion detection, user authentication, and encrypted traffic analysis. It covers methods for generating adversarial examples, their domain-specific effects, and the trade-offs attackers face between efficacy and resource costs. It also reviews recent defenses such as gradient masking, adversarial training, and detection techniques that aim to improve model resilience.
+*   **Methodology and Findings:** Adversarial examples (AE) can deceive deep learning models through subtle perturbations, causing misclassification and system vulnerabilities in cybersecurity tools. This paper reviews how AE attacks affect malware detection, botnet identification, intrusion detection, user authentication, and encrypted traffic analysis. It covers methods for generating adversarial examples, their domain specific effects, and the trade-offs attackers face between efficacy and resource costs. It also reviews recent defenses such as gradient masking, adversarial training, and detection techniques that aim to improve model resilience.
 *   **Link:** http://arxiv.org/abs/2412.12217v1
 *   **Link to Article:** [PDF](/finalizing/papers/R.12_Comprehensive_Survey_on_Adversarial_Examples_in_Cybersecurity_Impacts,_Challenges,_and_Mitigation_St.pdf)
 
@@ -108,7 +108,7 @@
 
 *   **Title:** *IoT Botnet Detection Using an Economic Deep Learning Model*
 *   **Authors:** Nelly Elsayed, Zag ElSayed, Magdy Bayoumi
-*   **Methodology and Findings:** Intrusion detection systems for the Internet of Things (IoT) must account for the computing and bandwidth limits of IoT devices. The authors proposed a resource-efficient deep learning model to detect IoT botnets and other network attacks. Compared to existing state-of-the-art detection models, their approach achieved higher accuracy while requiring a smaller implementation budget and reducing both training and detection times.
+*   **Methodology and Findings:** Intrusion detection systems for the Internet of Things (IoT) must account for the computing and bandwidth limits of IoT devices. The authors proposed a resource efficient deep learning model to detect IoT botnets and other network attacks. Compared to existing state of the art detection models, their approach achieved higher accuracy while requiring a smaller implementation budget and reducing both training and detection times.
 *   **Link:** http://arxiv.org/abs/2302.02013v4
 *   **Link to Article:** [PDF](/finalizing/papers/R.14_IoT_Botnet_Detection_Using_an_Economic_Deep_Learning_Model.pdf)
 
