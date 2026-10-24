@@ -1,0 +1,31 @@
+<!doctype html><meta charset=utf-8><title>Rehearsal timing sheet</title><style>
+body{font:15px/1.4 -apple-system,Segoe UI,Calibri,sans-serif;max-width:1000px;margin:20px auto;color:#222}h1{color:#8B1A4A}
+table{border-collapse:collapse;width:100%;font-size:14px}td,th{border-bottom:1px solid #ddd;padding:5px 7px;text-align:left}th{background:#8B1A4A;color:#fff}
+tr.cur td{background:#F6ECF0;font-weight:600}td.over{color:#c00;font-weight:700}td.under{color:#2A7F8E}
+#clock{font-size:46px;font-weight:700;color:#8B1A4A;margin:6px 0}button{font-size:16px;padding:8px 16px;margin-right:8px;border-radius:6px;border:1px solid #8B1A4A;background:#fff;color:#8B1A4A;cursor:pointer}
+button.main{background:#8B1A4A;color:#fff}.muted{color:#777;font-size:13px}</style>
+<h1>Rehearsal timing sheet</h1>
+<p class=muted>Press <b>Start</b> when you begin speaking and <b>Next slide</b> (or the space bar) each time you change slide. The sheet records each slide's actual time against its target and keeps your runs in this browser. Skip-if-short slides are marked ✂.</p>
+<div id=clock>00:00</div>
+<button class=main onclick="start()">Start</button><button class=main onclick="next()">Next slide ▶</button><button onclick="stopRun()">Finish run</button><button onclick="reset()">Reset</button><button onclick="exportCSV()">Export runs (CSV)</button>
+<p id=status class=muted></p>
+<table id=t><tr><th>#</th><th>Slide</th><th>Target</th><th>Target cumulative</th><th>Actual</th><th>Difference</th></tr></table>
+<h2>Previous runs</h2><table id=runs><tr><th>Run</th><th>Date</th><th>Total</th><th>Target</th><th>Difference</th></tr></table>
+<script>
+const S=[{"id": 1, "title": "Title slide (template)", "t": 30, "skip": false}, {"id": 2, "title": "The quiet burglar", "t": 60, "skip": false}, {"id": 3, "title": "Why this matters", "t": 60, "skip": false}, {"id": 4, "title": "Why rate limits miss it", "t": 75, "skip": false}, {"id": 5, "title": "The idea: watch the crowd, not the person", "t": 60, "skip": false}, {"id": 6, "title": "Research question and two claims", "t": 45, "skip": false}, {"id": 7, "title": "The testbed", "t": 75, "skip": false}, {"id": 8, "title": "From requests to features", "t": 60, "skip": false}, {"id": 9, "title": "How an attack minute is labelled", "t": 60, "skip": false}, {"id": 10, "title": "Three datasets", "t": 60, "skip": false}, {"id": 11, "title": "The model: a Temporal Convolutional Network", "t": 75, "skip": false}, {"id": 12, "title": "Training", "t": 45, "skip": true}, {"id": 13, "title": "Results: the headline", "t": 90, "skip": false}, {"id": 14, "title": "Spot the attack (audience vote)", "t": 40, "skip": true}, {"id": 15, "title": "Spot the attack: the answer", "t": 25, "skip": true}, {"id": 16, "title": "The plot twist", "t": 55, "skip": false}, {"id": 17, "title": "Fast enough for a gateway", "t": 45, "skip": false}, {"id": 18, "title": "When it fires and where it errs", "t": 75, "skip": false}, {"id": 19, "title": "Limitations, honestly", "t": 75, "skip": false}, {"id": 20, "title": "Take-home messages", "t": 45, "skip": false}, {"id": 21, "title": "Thank you and questions", "t": 15, "skip": false}];let t0=null,lap=null,idx=-1,act=[],timer=null;
+const f=s=>{s=Math.round(s);const m=Math.floor(Math.abs(s)/60),x=Math.abs(s)%60;return (s<0?'-':'')+String(m).padStart(2,'0')+':'+String(x).padStart(2,'0')};
+function draw(){const T=document.getElementById('t');T.innerHTML='<tr><th>#</th><th>Slide</th><th>Target</th><th>Target cumulative</th><th>Actual</th><th>Difference</th></tr>';let c=0;
+S.forEach((s,i)=>{c+=s.t;const a=act[i];const d=a!=null?a-s.t:null;T.insertAdjacentHTML('beforeend',`<tr class="${i==idx?'cur':''}"><td>${s.id}</td><td>${s.skip?'✂ ':''}${s.title}</td><td>${f(s.t)}</td><td>${f(c)}</td><td>${a!=null?f(a):''}</td><td class="${d==null?'':(d>5?'over':(d<-5?'under':''))}">${d==null?'':(d>0?'+':'')+f(d)}</td></tr>`)});}
+function tick(){if(t0){document.getElementById('clock').textContent=f((Date.now()-t0)/1000);}}
+function start(){if(t0)return;t0=Date.now();lap=t0;idx=0;act=[];timer=setInterval(tick,250);draw();}
+function next(){if(!t0)return start();const n=Date.now();act[idx]=(n-lap)/1000;lap=n;idx++;if(idx>=S.length){stopRun();return;}draw();}
+function stopRun(){if(!t0)return;if(idx<S.length&&act[idx]==null)act[idx]=(Date.now()-lap)/1000;clearInterval(timer);const tot=(Date.now()-t0)/1000;const tgt=S.reduce((a,s)=>a+s.t,0);
+const R=JSON.parse(localStorage.getItem('runs')||'[]');R.push({date:new Date().toLocaleString(),total:tot,target:tgt,per:act});localStorage.setItem('runs',JSON.stringify(R));t0=null;idx=-1;draw();runs();
+document.getElementById('status').textContent='Run saved: '+f(tot)+' (target '+f(tgt)+').';}
+function reset(){clearInterval(timer);t0=null;idx=-1;act=[];document.getElementById('clock').textContent='00:00';draw();}
+function runs(){const R=JSON.parse(localStorage.getItem('runs')||'[]');const T=document.getElementById('runs');T.innerHTML='<tr><th>Run</th><th>Date</th><th>Total</th><th>Target</th><th>Difference</th></tr>';
+R.forEach((r,i)=>T.insertAdjacentHTML('beforeend',`<tr><td>${i+1}</td><td>${r.date}</td><td>${f(r.total)}</td><td>${f(r.target)}</td><td>${(r.total-r.target>0?'+':'')+f(r.total-r.target)}</td></tr>`));}
+function exportCSV(){const R=JSON.parse(localStorage.getItem('runs')||'[]');let c='run,date,slide,title,target_s,actual_s\n';R.forEach((r,i)=>S.forEach((s,j)=>{c+=`${i+1},"${r.date}",${s.id},"${s.title}",${s.t},${r.per[j]!=null?r.per[j].toFixed(1):''}\n`}));
+const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([c],{type:'text/csv'}));a.download='rehearsal_runs.csv';a.click();}
+document.addEventListener('keydown',e=>{if(e.code==='Space'){e.preventDefault();next();}});draw();runs();
+</script>

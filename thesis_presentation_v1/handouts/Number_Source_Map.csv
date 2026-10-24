@@ -1,0 +1,40 @@
+slide,number_on_slide,meaning,source_in_thesis_v18
+3,22%,breaches where stolen credentials were the initial access vector (Verizon research alongside 2025 DBIR),ch.2.1 [8]
+3,39%,"breaches where credential abuse appears at some stage (2026 DBIR, p. 16)",ch.2.1 [9]
+3,+113% (121 → 258),year-over-year change in daily API attacks per enterprise (Akamai),ch.2.1 [10]
+3,T1110.003 / OAT-007,MITRE ATT&CK password spraying / OWASP credential cracking,"ch.2.1 [1], [14]"
+5,~9 logins per minute,per legitimate client: pause 0.8–1.2 × 6.67 s between logins,Table 1
+5,0.30,failure-rate threshold of the campaign rule,ch.3.3
+7,200 / 15,legitimate clients / attack workers,Table 1
+7,30 requests/s,target aggregate legitimate rate,Table 1
+7,1–3 s,pause between attack requests per worker,Table 1
+7,"admin_1…999, password123!",spraying targets and password,Table 1
+8,"17,198","windows across all datasets, JA3 always 1",ch.3.2
+8,"3 informative features, 10-window sequences","distinct IPs, requests, failure rate; L = 10","ch.3.2, ch.3.4"
+9,"3,187 (1,592 benign / 1,595 attack)",Training Dataset windows,Table 3
+9,100% / 100% / 99.99%,agreement of label with failure-rate threshold alone,Table 2
+10,"53.1 h, 8,095,202 requests",Training Dataset,Table 3
+10,70 / 15 / 15,chronological split,ch.3.4
+10,"154 min, 145 sequences",Chaotic Dataset,Table 3
+10,"233.4 h, 33,731,232 requests, 13,351 sequences",Large Dataset,Table 3
+11,"28,241",trainable parameters,Table 5
+11,≈ 113 KB,"28,241 × 4 bytes (32-bit weights), computed for the talk",derived from Table 5
+11,receptive field 29,"RF = 1 + 2(k−1)(2^B − 1), k = 3, B = 3",ch.3.5
+12,epoch 27; 30 epochs,selected checkpoint,"Table 6, ch.4.1"
+13,"1,992 / 1,992; 11 / 11,359",Large Dataset TP; FP of benign,Table 7
+13,0.9945 / 1.0000 / 0.9972,Large Dataset precision / recall / F1 at θ = 0.50,Table 7
+13,1.39 per day,Large Dataset false alerts per day at θ = 0.50,Table 8
+13,0.8947 / 0.7727 / 0.8293,Chaotic Dataset precision / recall / F1,Table 7
+13,0 of 470,false positives on the hold-out test set,ch.4.2
+15,"≈ 800 IPs, ≈ 2,800 requests (A); ≈ 74 IPs, < 200 requests, failure rate 0.35–0.38 (B)","the two example sequences (Large Dataset windows ending 2,854 and 1,188)",computed from the Large Dataset for the talk
+16,"1,459 vs 775; 288 vs 803","mean distinct IPs, attack vs benign, Training vs Large Dataset",Table 4
+16,0.2575 (≈ 0.26),earlier model's recall on the Large Dataset,Table 10
+16,+0.707 / −0.392,Spearman correlation of score with failure rate / distinct IPs (Large Dataset),Table 9
+17,"0.65 ms mean, 1.64 ms P99",forward-pass latency,Table 11
+17,≈ 0.001% of one core,0.65 ms / 60 s ≈ 0.0000108,ch.4.6
+17,1.1 mm of 100 m,"0.65 ms / 60 s × 100 m = 1.08 mm, analogy for the talk",derived from ch.4.6
+18,"15 false positives, 10 misses",errors at θ = 0.50 on the independent test datasets,Table 13
+18,0.19–0.30; 0.32–0.36,failure rates of false positives; of misses,Table 13
+18,"> 11,000 distant benign minutes, 0 flagged","11,327 Large + 52 Chaotic benign windows > 15 min from an attack",Table 13
+19,≈ 2.3 successful logins per failure,P ≥ F(1 − 0.30)/0.30 ≈ 2.33F,ch.5.2 (L3)
+20,F1 0.9972 on 233 unseen hours,Large Dataset,Table 7
