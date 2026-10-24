@@ -1,6 +1,0 @@
-2026-09-30 19:05:49.574 | INFO     | __main__:<module>:18 - Initializing horizontal diagram generator
-2026-09-30 19:05:49.574 | INFO     | __main__:create_horizontal_system_pipeline:21 - Generating horizontal system pipeline diagram...
-2026-09-30 19:05:50.117 | INFO     | __main__:create_horizontal_system_pipeline:157 - Saved horizontal system architecture diagram to /Users/adrian/code/Research/presentation/assets/horizontal_system_architecture.png
-2026-09-30 19:05:50.117 | INFO     | __main__:create_horizontal_tcn_architecture:160 - Generating horizontal TCN architecture diagram...
-2026-09-30 19:05:50.513 | INFO     | __main__:create_horizontal_tcn_architecture:273 - Saved horizontal TCN architecture diagram to /Users/adrian/code/Research/presentation/assets/horizontal_tcn_architecture.png
-2026-09-30 19:05:50.513 | INFO     | __main__:<module>:278 - Diagram generation complete!
