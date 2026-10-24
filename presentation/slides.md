@@ -1,0 +1,853 @@
+---
+marp: true
+theme: default
+paginate: true
+header: "Master's Thesis Defense: Self-Learning Systems for API Defense"
+footer: "Adrian Chia | Master of Science in Cybersecurity & Digital Security"
+backgroundColor: "#090D16"
+color: "#F8FAFC"
+style: |
+  section {
+    background-color: #090D16;
+    color: #F8FAFC;
+    font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    padding: 35px 50px;
+  }
+  h1 {
+    color: #38BDF8;
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+  }
+  h2 {
+    color: #F8FAFC;
+    font-size: 1.4rem;
+    margin-top: 0.2rem;
+  }
+  h3 {
+    color: #38BDF8;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+  p, li {
+    font-size: 0.88rem;
+    line-height: 1.45;
+    color: #94A3B8;
+  }
+  strong {
+    color: #F8FAFC;
+  }
+  .tag {
+    display: inline-block;
+    padding: 3px 10px;
+    background: rgba(56, 189, 248, 0.15);
+    border: 1px solid #38BDF8;
+    border-radius: 4px;
+    font-size: 0.72rem;
+    font-weight: bold;
+    color: #38BDF8;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+  .time-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid #10B981;
+    border-radius: 4px;
+    font-size: 0.72rem;
+    font-weight: bold;
+    color: #10B981;
+    margin-left: 10px;
+  }
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+  }
+  .card-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 12px;
+  }
+  .card {
+    background-color: #131B2E;
+    border: 1px solid #24324F;
+    border-radius: 8px;
+    padding: 14px 18px;
+  }
+  .metric-val {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #38BDF8;
+    line-height: 1.1;
+  }
+  .metric-label {
+    font-size: 0.75rem;
+    color: #94A3B8;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-top: 4px;
+  }
+  .alert-box {
+    background: rgba(239, 68, 68, 0.12);
+    border-left: 4px solid #EF4444;
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  .success-box {
+    background: rgba(16, 185, 129, 0.12);
+    border-left: 4px solid #10B981;
+    padding: 10px 14px;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  img {
+    max-height: 380px;
+    border-radius: 6px;
+    border: 1px solid #24324F;
+    display: block;
+    margin: 10px auto;
+  }
+  footer {
+    font-size: 0.65rem;
+    color: #64748B;
+  }
+  header {
+    font-size: 0.65rem;
+    color: #64748B;
+  }
+---
+
+<!-- SLIDE 1 -->
+<span class="tag">Master's Thesis Defense</span> <span class="time-badge">Target: 0:00 - 1:15</span>
+
+# Self-Learning Systems
+## Securing API login endpoints against “low and slow” botnet credential stuffing using self-learning systems
+
+<br>
+
+<div class="card-grid">
+  <div class="card">
+    <h3>Research Context & Candidate</h3>
+    <p><strong>Candidate:</strong> Adrian Chia<br>
+    <strong>Degree:</strong> Master of Science in Cybersecurity & Digital Security<br>
+    <strong>Discipline:</strong> Quantitative AI, Cyber Threat Intelligence & DevOps<br>
+    <strong>Core Thesis:</strong> Neutralizing distributed residential botnets via self-learning Temporal Convolutional Networks and cryptographic handshake invariants.</p>
+  </div>
+  <div class="card">
+    <h3>The Opening Hook: The Ghost in the API</h3>
+    <p><em>«Imagine a bank robbery where 10,000 people enter through separate doors, each casually whispering a single wrong safe combination once per hour, and leaving unnoticed.»</em></p>
+    <div class="alert-box">
+      <p style="color: #F8FAFC; margin: 0;"><strong>The Crisis:</strong> Every traditional WAF sees a pristine human stream. Meanwhile, 100,000 user accounts are silently compromised.</p>
+    </div>
+  </div>
+</div>
+
+<div class="card-grid-3" style="margin-top: 15px;">
+  <div class="card"><div class="metric-val">33.7M</div><div class="metric-label">Evaluated Telemetry Requests</div></div>
+  <div class="card"><div class="metric-val">0.65 ms</div><div class="metric-label">Inline CPU Inference Latency</div></div>
+  <div class="card"><div class="metric-val">1.0000</div><div class="metric-label">Enterprise Empirical Recall</div></div>
+</div>
+
+<!-- Note:
+Good morning, distinguished members of the examination committee, faculty, and fellow researchers.
+My name is Adrian Chia, and today I present my thesis: "Self-learning systems - Securing API login endpoints against 'low and slow' botnet credential stuffing using self-learning systems."
+Let me open with an analogy that illustrates our central dilemma: what I call "The Ghost in the API." If a thief attempts to pick an electronic lock a thousand times in three seconds, sirens blare, doors lock, and guards arrive. But what if ten thousand individuals enter through separate doors, whisper a single guess once every sixty minutes, and walk away?
+To traditional network monitoring, each event looks completely benign. Yet systematically, your organization's user accounts are pillaged.
+Today, I will show you how we solve this blind spot without expensive GPU hardware, operating directly on live API telemetry in under 1 millisecond.
+-->
+
+---
+
+<!-- SLIDE 2 -->
+<span class="tag">The Threat Landscape</span> <span class="time-badge">Target: 1:15 - 2:15</span>
+
+# The Threat Evolution: When Brute-Force Went "Low-and-Slow"
+## From Volumetric DDoS to Asymmetric, Distributed Residential Attacks
+
+<div class="card-grid">
+  <div class="card">
+    <h3 style="color: #EF4444;">Yesterday: Volumetric Brute-Force (Legacy)</h3>
+    <ul>
+      <li><strong>Traffic Signature:</strong> 10,000 requests/second from fixed cloud IP blocks (AWS, DigitalOcean, Hetzner).</li>
+      <li><strong>Defensive Footprint:</strong> Enormous anomalous spikes on network telemetry graphs.</li>
+      <li><strong>Mitigation Strategy:</strong> Trivial static CIDR blocking and threshold rate-limiting.</li>
+      <li><strong>Attacker Cost:</strong> Cheap datacenter VPS instances, easily burned and blacklisted.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3 style="color: #38BDF8;">Today: Distributed "Low-and-Slow" (Modern)</h3>
+    <ul>
+      <li><strong>Traffic Signature:</strong> ≤ 1 request/minute per IP address across 50,000+ distinct IP endpoints.</li>
+      <li><strong>Defensive Footprint:</strong> Indistinguishable from organic background human authentication traffic.</li>
+      <li><strong>Evasion Vectors:</strong> Millions of compromised residential IoT nodes and mobile 4G/5G proxy networks.</li>
+      <li><strong>Economic Incentive:</strong> Credential stuffing fuels a billion-dollar account takeover (ATO) underground market[^16].</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card-grid-3">
+  <div class="card">
+    <p><strong>Over 80%</strong> of web application breaches trace back to stolen credentials (Verizon DBIR 2025)[^16].</p>
+  </div>
+  <div class="card">
+    <p><strong>OWASP Top 10:2025</strong> places Authentication Failures (A07:2025) as a primary architectural vulnerability[^17].</p>
+  </div>
+  <div class="card">
+    <p><strong>Residential Proxies:</strong> Attacker leases rotating ISP addresses for pennies per gigabyte, nullifying IP blacklists.</p>
+  </div>
+</div>
+
+<!-- Note:
+To understand why modern perimeter defenses fail, we must look at how threat actors evolved.
+In the early 2010s, brute force was noisy: a single cloud VM would bombard a login URL with thousands of HTTP POST requests. Security teams wrote simple threshold rules: if an IP makes more than 50 requests in a minute, block it.
+That era is over. Today, criminal syndicates leverage residential proxy networks—often compromised Smart TVs, IoT cameras, and home routers.
+A modern botnet commands tens of thousands of real residential IP addresses assigned to Comcast, AT&T, or Deutsche Telekom. It dispatches a single login request per IP every few minutes.
+Because the attack is distributed horizontally, every single IP stays comfortably below any standard rate limiter.
+-->
+
+---
+
+<!-- SLIDE 3 -->
+<span class="tag">The Problem Statement</span> <span class="time-badge">Target: 2:15 - 3:30</span>
+
+# The Great Perimeter Blind Spot: Failure of Static Rate Limits
+## Why Traditional API Gateways Suffer a 100% Defensive Blind Spot
+
+<div class="card-grid">
+  <div class="card">
+    <h3>The Mathematical Breakdown of Gateway Evasion</h3>
+    <p>Enterprise API Gateways (Envoy, Kong, AWS API Gateway, NGINX) rely on static leaky/token buckets:</p>
+    <div style="background: #090D16; padding: 10px; border-radius: 6px; border: 1px solid #24324F; font-family: monospace; font-size: 0.85rem; color: #38BDF8;">
+      GATEWAY_RULE: Limit = 100 req / minute / IP<br>
+      BOTNET_RATE:  Rate  = 1 req / 5 minutes / IP<br>
+      RESULT:       Attack Traffic Passes with 0% Throttling!
+    </div>
+    <div class="alert-box" style="margin-top: 12px;">
+      <p style="color: #F8FAFC; margin: 0;"><strong>Per-IP Quota Trap:</strong> Because $\text{Rate}_{\text{bot}} \ll \text{Threshold}_{\text{limit}}$, the static gateway evaluates each request in complete isolation, achieving <strong>100% attacker success</strong>.</p>
+    </div>
+  </div>
+  <div class="card">
+    <h3>The Human Collateral Damage Dilemma</h3>
+    <ul>
+      <li><strong>If Gateways Tighten Quotas:</strong> Lowering thresholds to 2 req/min instantly throttles corporate office networks, universities, and mobile gateways sharing NAT/CGNAT IPs.</li>
+      <li><strong>The CAPTCHA Trap:</strong> Forcing CAPTCHAs destroys user conversion rates, inflicts friction, and fails against automated vision solvers and human CAPTCHA farms.</li>
+      <li><strong>Stateless Evaluation:</strong> Gateways discard temporal sequence history, remaining completely blind to multi-IP distributed coordination.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" style="margin-top: 12px; text-align: center;">
+  <p style="margin: 0; font-size: 0.95rem; color: #F8FAFC;">
+    <strong>The Core Problem:</strong> We are fighting a <em>distributed, temporal, multi-dimensional coordination</em> using a <em>stateless, single-dimensional scalar counter</em>.
+  </p>
+</div>
+
+<!-- Note:
+Here is the core architectural failure of modern perimeter security.
+An API gateway like Kong or Envoy typically maintains a Redis token bucket. It says: "If IP X sends more than 100 requests per minute, issue HTTP 429."
+Now consider the botnet's math: 10,000 residential nodes each send exactly 1 request every 5 minutes.
+To the token bucket, 1 is less than 100. It grants access every time. 100% bypass!
+Why not just lower the threshold to 2 requests per minute? Because of NAT and Carrier-Grade NAT. If you tighten the rule, an entire corporate office or university campus sharing one public IP gets locked out.
+The gateway is evaluating requests statelessly. It cannot see the invisible temporal choreography connecting IP A in Chicago with IP B in Tokyo.
+-->
+
+---
+
+<!-- SLIDE 4 -->
+<span class="tag">The Defensive Paradigm</span> <span class="time-badge">Target: 3:30 - 4:45</span>
+
+# The Paradigm Shift: From Brittle Rules to Self-Learning Baselines
+## Moving from Reactive IP Reputation to Dynamic Behavioral Fingerprinting
+
+![w:1100 center](assets/attack_vs_defense_infographic.png)
+
+<div class="card-grid">
+  <div class="card">
+    <h3 style="color: #EF4444;">Static Perimeter (Current State)</h3>
+    <p>Scalar IP rate counters + static Geo-IP lists + IP reputation blacklists.<br>
+    <strong>Outcome:</strong> Easily evaded by residential proxy rotation, zero temporal correlation, high false positives on corporate NAT.</p>
+  </div>
+  <div class="card">
+    <h3 style="color: #10B981;">Self-Learning Perimeter (This Thesis)</h3>
+    <p>Protocol-level TLS invariants + temporal sequence modeling + adaptive sliding window inference.<br>
+    <strong>Outcome:</strong> Isolates subtle coordination across thousands of residential IPs in real time with 0.65ms CPU execution.</p>
+  </div>
+</div>
+
+<!-- Note:
+This slide visualizes the fundamental paradigm shift my thesis introduces.
+On the left, we see the static status quo: requests hit the gateway, a scalar counter checks if count exceeds limit, and the botnet casually glides right through.
+On the right, we replace the static counter with a dynamic, self-learning cognitive defense.
+Instead of inspecting IP addresses—which are ephemeral and easily rented—we capture invariant cryptographic features at the transport layer, aggregate cross-IP temporal behaviors, and feed them into a neural sequence model.
+When the botnet executes its distributed choreography, the model identifies the hidden temporal footprint and triggers surgical throttling before a single account is breached.
+-->
+
+---
+
+<!-- SLIDE 5 -->
+<span class="tag">Cryptographic Ground Truth</span> <span class="time-badge">Target: 4:45 - 6:00</span>
+
+# Ground Truth at the Wire: Anchoring in Cryptographic TLS Invariants
+## Why HTTP Headers Lie, but Transport Layer Handshakes Cannot
+
+<div class="card-grid">
+  <div class="card">
+    <h3 style="color: #EF4444;">Trivial to Forged (Application Layer L7)</h3>
+    <ul>
+      <li><code>User-Agent</code> string: Arbitrarily spoofed with 1 line of Python code.</li>
+      <li><code>Accept-Language</code> / <code>Accept-Encoding</code>: Spoofed via standard bot templates.</li>
+      <li><code>X-Forwarded-For</code>: Often stripped, spoofed, or manipulated by intermediate proxies.</li>
+      <li><strong>Vulnerability:</strong> High adversarial malleability and zero friction for attackers.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3 style="color: #10B981;">Cryptographic Invariants (Transport Layer L4/L5)</h3>
+    <ul>
+      <li><strong>Cipher Suites:</strong> Specific ordered list of cryptographic algorithms supported by client runtime.</li>
+      <li><strong>TLS Extensions:</strong> Exact sequence of protocol extensions (SNI, ALPN, Supported Groups).</li>
+      <li><strong>Elliptic Curves & Formats:</strong> Point formats negotiated in <code>Client Hello</code>.</li>
+      <li><strong>Ground Truth:</strong> Directly reflects client SSL runtime (Go, Python Requests, OpenSSL, Chrome BoringSSL).</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card" style="margin-top: 12px;">
+  <p><strong>The JA3/TLS Invariant Principle:</strong> An attacker can forge an iPhone Safari <code>User-Agent</code> in milliseconds. However, changing their bot's underlying cryptographic TLS handshake requires re-compiling custom socket runtimes at massive scale—imposing prohibitive computational and operational friction[^5],[^7].</p>
+</div>
+
+<!-- Note:
+Why do we base our feature engineering on TLS handshakes instead of standard HTTP request headers?
+Because in HTTP, headers are pure fiction. Any junior attacker can write 'User-Agent: Mozilla/5.0 Macintosh' in Python Requests or Go.
+However, when a client establishes a TLS connection, it must transmit a TLS Client Hello packet. This packet contains an ordered list of supported cryptographic cipher suites, protocol extensions, and elliptic curve formats.
+A real Chrome browser on macOS uses Google's BoringSSL library. A Python bot uses OpenSSL or libcurl.
+Even if the bot copies Chrome's User-Agent string, its TLS handshake broadcasts the distinctive signature of Python's socket library.
+Forging TLS handshakes at scale across millions of distributed residential proxy nodes introduces severe operational friction. TLS handshakes give us cryptographic ground truth.
+-->
+
+---
+
+<!-- SLIDE 6 -->
+<span class="tag">System Architecture</span> <span class="time-badge">Target: 6:00 - 7:15</span>
+
+# The End-to-End Architecture: From Wire Telemetry to Adaptive Throttling
+## Real-Time Ingestion, Feature Pipeline, CPU Inference, and Enforcement
+
+![w:1150 center](assets/horizontal_system_architecture.png)
+
+<div class="card-grid-3">
+  <div class="card">
+    <h3>Stage 1 & 2: Telemetry & Windowing</h3>
+    <p>Incoming TLS handshakes extract JA3 hashes, entropy, and IP ratios into non-overlapping 10-second tumbling aggregation windows.</p>
+  </div>
+  <div class="card">
+    <h3>Stage 3 & 4: TCN Sequence & CPU Head</h3>
+    <p>Sliding sequence buffer ($L=10$ windows) feeds our 28k-parameter TCN. PyTorch CPU engine outputs bot probability $P(\text{bot})$ in 0.65ms.</p>
+  </div>
+  <div class="card">
+    <h3>Stage 5: Dual-Threshold Enforcement</h3>
+    <p>Adaptive throttling triggers: $P \ge 0.50$ introduces exponential delays (tarpitting); $P \ge 0.85$ invokes surgical API gateway blocking.</p>
+  </div>
+</div>
+
+<!-- Note:
+Let us examine the end-to-end engineering architecture, illustrated on this slide.
+The pipeline operates across five synchronized stages:
+First, at the ingress layer, Envoy or NGINX captures the raw TLS Client Hello packet and HTTP headers, passing metadata asynchronously without blocking the client.
+Second, telemetry is aggregated into 10-second temporal windows, computing statistical features: unique IP counts, request velocity, JA3 fingerprint diversity, and Shannon entropy.
+Third, a FIFO queue maintains the last 10 sequential windows—giving our model a temporal window of 100 seconds.
+Fourth, our optimized Temporal Convolutional Network evaluates this 10-step sequence on standard server CPUs in just 0.65 milliseconds.
+Fifth, an enforcement engine applies dual-threshold controls: benign traffic passes instantly, suspicious traffic is tarpitted with artificial latency, and confirmed botnets are dropped.
+-->
+
+---
+
+<!-- SLIDE 7 -->
+<span class="tag">Model Selection & Rationale</span> <span class="time-badge">Target: 7:15 - 8:30</span>
+
+# Algorithmic Selection: Why TCNs Outshine LSTMs & Reinforcement Learning
+## A Principled Architectural Comparison for Production Gateway Defense
+
+<div class="card-grid">
+  <div class="card">
+    <h3>Why Not LSTMs or GRUs?</h3>
+    <ul>
+      <li><strong>Sequential Bottleneck:</strong> Recurrent networks compute step $t$ strictly after $t-1$. Zero parallelization during inference.</li>
+      <li><strong>Vanishing Gradients:</strong> LSTMs struggle to retain long-range temporal dependencies without gate degradation[^19].</li>
+      <li><strong>High CPU Latency:</strong> Step-by-step unrolling incurs ~4–8ms CPU overhead—far exceeding API gateway budgets.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Why Not Deep Reinforcement Learning?</h3>
+    <ul>
+      <li><strong>Sample Inefficiency:</strong> DRL agents require millions of trial-and-error interactions to converge[^8].</li>
+      <li><strong>Reward Function Brittleness:</strong> Subtle policy exploitation creates severe false-positive cascades.</li>
+      <li><strong>Exploration Risk:</strong> DRL exploration policies in live authentication systems risk locking out legitimate enterprise customers.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="success-box" style="margin-top: 15px;">
+  <p style="color: #F8FAFC; margin: 0;"><strong>The TCN Advantage:</strong> Temporal Convolutional Networks combine 1D dilated causal convolutions with residual connections. They enable <em>fully parallelized feature extraction</em>, <em>strictly deterministic latency (0.65ms)</em>, <em>zero future information leakage</em>, and a <em>compact footprint of only 28,241 parameters</em>[^19],[^20].</p>
+</div>
+
+<!-- Note:
+A critical academic and engineering question: why did we select a Temporal Convolutional Network over LSTMs, Transformers, or Deep Reinforcement Learning?
+Let's analyze the tradeoffs.
+LSTMs and GRUs rely on sequential recurrence: time step 10 cannot be computed until time step 9 completes. That sequential dependency creates a latency bottleneck of 4 to 8 milliseconds on CPU, which is unacceptable for an inline API gateway. Furthermore, LSTMs suffer from vanishing gradients across long time horizons.
+Deep Reinforcement Learning, while fashionable in academic literature, is notoriously sample-inefficient and dangerous to deploy in production authentication gateways. An exploratory RL agent trying out new policies might accidentally block all executive logins on Monday morning!
+TCNs provide the exact sweet spot: 100% causal convolutions prevent future leakage, dilated convolutions grant an expansive receptive field, and standard 1D matrix operations execute deterministically on CPU in 0.65 milliseconds with just 28,000 parameters.
+-->
+
+---
+
+<!-- SLIDE 8 -->
+<span class="tag">Deep Learning Mechanics</span> <span class="time-badge">Target: 8:30 - 9:45</span>
+
+# Inside the TCN: Dilated Causal Convolutions & Receptive Field Geometry
+## Mathematical Guarantees: Zero Future Leakage & Exponential Receptive Field
+
+![w:1150 center](assets/horizontal_tcn_architecture.png)
+
+<div class="card-grid">
+  <div class="card">
+    <h3>Receptive Field Geometry Formulation</h3>
+    <p>For kernel size $k=3$ and dilation factors $d \in \{1, 2, 4\}$ across $L_{\text{blocks}}=3$ residual stages:</p>
+    <div style="background: #090D16; padding: 8px 12px; border-radius: 6px; border: 1px solid #24324F; font-family: monospace; font-size: 0.85rem; color: #10B981;">
+      RF = 1 + \sum_{l=0}^{2} 2 \cdot (k - 1) \cdot 2^l<br>
+      RF = 1 + 2 \cdot (3 - 1) \cdot (1 + 2 + 4) = 1 + 4 \cdot 7 = 29 \text{ steps}
+    </div>
+    <p style="margin-top: 8px;">With sequence length $L=10$, the network achieves <strong>100% full receptive field coverage</strong> across all past time windows with zero blind spots.</p>
+  </div>
+  <div class="card">
+    <h3>Architectural Hyperparameters</h3>
+    <ul>
+      <li><strong>Total Parameters:</strong> 28,241 (Ultralight memory footprint: ~110 KB).</li>
+      <li><strong>Channels & Blocks:</strong> 3 Residual Blocks with 32 hidden feature channels.</li>
+      <li><strong>Causal Padding:</strong> Strict left-side padding of $(k-1) \cdot d$ guarantees $y_t$ depends solely on $\{x_0, \dots, x_t\}$.</li>
+      <li><strong>Regularization:</strong> Weight normalization and Spatial Dropout ($p=0.20$) prevent co-adaptation.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Note:
+Let's dive into the mathematical mechanics of our Temporal Convolutional Network.
+In time-series security detection, two guarantees are paramount: causality and receptive field depth.
+First: Causality. Traditional CNNs look forward and backward in time. In real-time security, future data does not exist! By enforcing causal convolutions with left-padding of (k-1)*d, we mathematically guarantee that the prediction at time t depends exclusively on past observations.
+Second: Dilation. To detect slow-and-low botnets, we need to observe long stretches of time without blowing up parameter counts. By doubling the dilation factor at each layer—1, 2, 4—the network's receptive field expands exponentially rather than linearly.
+With kernel size 3 and 3 residual blocks, our receptive field covers 29 time steps. For our 10-step sequence, this provides complete, uninterrupted contextual coverage of past traffic dynamics in an ultralight 28,000-parameter architecture.
+-->
+
+---
+
+<!-- SLIDE 9 -->
+<span class="tag">Experimental Methodology</span> <span class="time-badge">Target: 9:45 - 11:00</span>
+
+# The Realistic Cyber-Range: Simulating State-of-the-Art Evasive Botnets
+## Engineering High-Fidelity Synthetic Telemetry to Replicate Real World Botnets
+
+<div class="card-grid">
+  <div class="card">
+    <h3>Organic Human Baseline Simulation</h3>
+    <ul>
+      <li><strong>Traffic Patterns:</strong> Diurnal Poisson arrival processes with authentic peak and trough working hours.</li>
+      <li><strong>Client Runtimes:</strong> Diverse, realistic distribution of modern desktop and mobile browsers (Chrome, Safari, Firefox, Edge).</li>
+      <li><strong>Failure Rates:</strong> Natural 2–5% baseline authentication failure rate representing organic human typos and forgotten passwords.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Adversarial Botnet Simulation</h3>
+    <ul>
+      <li><strong>Residential Rotation:</strong> Up to 10,000 rotating residential IP addresses; each node emits $\le 1$ request/minute.</li>
+      <li><strong>Dynamic Stealth Modes:</strong> Periodic burst bursts, randomized sleep jitters, and coordinated multi-phase credential campaigns.</li>
+      <li><strong>Handshake Invariants:</strong> Realistic Python <code>requests</code>, Go <code>net/http</code>, and headless runtime TLS signatures.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="card-grid-3">
+  <div class="card"><div class="metric-val">33.7M</div><div class="metric-label">Total Authentications</div></div>
+  <div class="card"><div class="metric-val">233 Hours</div><div class="metric-label">Simulated Timeline (~10 Days)</div></div>
+  <div class="card"><div class="metric-val">100%</div><div class="metric-label">Cryptographic Realism</div></div>
+</div>
+
+<!-- Note:
+To validate an AI defense system rigorously, we cannot rely on stale, decades-old datasets like KDD-Cup 99, which lack modern API and TLS structures. Nor could we use production customer data due to strict privacy and regulatory constraints.
+Therefore, we engineered a high-fidelity cyber-range simulation platform.
+Our generator models two distinct processes:
+First, organic human traffic following a non-homogeneous Poisson arrival process with diurnal circadian rhythms, realistic browser distributions, and natural human password error rates.
+Second, an evasive distributed botnet commanding thousands of residential IPs, executing slow credential stuffing, rotating User-Agents, and injecting randomized jitter.
+In total, we generated over 33.7 million requests across 233 hours of continuous traffic, creating the most comprehensive credential stuffing benchmark in current literature.
+-->
+
+---
+
+<!-- SLIDE 10 -->
+<span class="tag">Data Engineering & Training</span> <span class="time-badge">Target: 11:00 - 12:15</span>
+
+# Data Engineering: Aggregation, Labeling & Zero-Leakage Splitting
+## Transforming Raw HTTP/TLS Events into Temporal Feature Sequences
+
+<div class="card-grid">
+  <div class="card">
+    <h3>The 8-Dimensional Feature Vector ($x_t$)</h3>
+    <ul>
+      <li><code>total_requests</code>: Total throughput in the 10-second window.</li>
+      <li><code>unique_ips</code>: Distinct client IP count.</li>
+      <li><code>ip_churn_ratio</code>: Ratio of unique IPs to total volume ($U / N$).</li>
+      <li><code>ja3_entropy</code>: Shannon entropy of observed TLS fingerprints.</li>
+      <li><code>dominant_ja3_ratio</code>: Frequency share of the top TLS fingerprint.</li>
+      <li><code>failed_login_ratio</code>: HTTP 401/403 failure rate ($\text{Failures} / N$).</li>
+      <li><code>user_agent_entropy</code>: Dispersion of reported User-Agent strings.</li>
+      <li><code>ua_ja3_discrepancy</code>: Inconsistency count (e.g., Safari UA + Python TLS).</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Strict Temporal Zero-Leakage Splitting</h3>
+    <ul>
+      <li><strong>No Random K-Fold:</strong> Standard random train/test splitting leaks future temporal dependencies into the past.</li>
+      <li><strong>Chronological Partitioning:</strong> Models are trained strictly on past timeline segments and tested on future segments.</li>
+      <li><strong>Windowing:</strong> Non-overlapping 10s windows grouped into 10-step rolling sequences ($T \times 8$).</li>
+      <li><strong>Standardization:</strong> Robust z-score normalization fitted strictly on training partition to eliminate scaling bias.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="alert-box" style="margin-top: 10px;">
+  <p style="color: #F8FAFC; margin: 0;"><strong>Ground Truth Labeling:</strong> A window is labeled attack ($y_t = 1$) if bot requests constitute $>10\%$ of window volume, enforcing early warning capability.</p>
+</div>
+
+<!-- Note:
+How do we convert raw HTTP logs into something a neural network can consume in real time?
+Every 10 seconds, our streaming engine summarizes all incoming requests into an 8-dimensional feature vector.
+Notice what features we engineered: not raw IP strings, but structural invariants: the IP churn ratio, the failure rate, the Shannon entropy of TLS fingerprints, and most importantly, the discrepancy between reported User-Agents and negotiated TLS fingerprints.
+For training, we strictly adhered to methodological hygiene. We strictly forbade random k-fold cross-validation, which corrupts temporal time-series through data leakage.
+Instead, we implemented strictly chronological train-test splits: the model learned on the past and was evaluated exclusively on unseen future time segments.
+-->
+
+---
+
+<!-- SLIDE 11 -->
+<span class="tag">Crucial Research Insight</span> <span class="time-badge">Target: 12:15 - 13:30</span>
+
+# The Overfitting Trap: How Constrained Training Led to a 74% Recall Collapse
+## The Dramatic Turning Point in Our Research Journey
+
+![w:1000 center](assets/v2_old_vs_new_comparison.png)
+
+<div class="card-grid">
+  <div class="card">
+    <h3 style="color: #EF4444;">The Initial Flawed Baseline (335 Windows)</h3>
+    <ul>
+      <li>Trained on small synthetic batch: 335 windows (~55 mins of data).</li>
+      <li><strong>Apparent Lab Success:</strong> Achieved 98.4% precision and 100% recall on pristine test data.</li>
+      <li><strong>The Catastrophic Blind Test:</strong> When deployed against a dynamic 154-minute chaotic attack, recall collapsed to <strong>0.7407</strong>!</li>
+      <li><strong>Root Cause:</strong> The model memorized static velocity patterns and overfit to uniform attack densities.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3 style="color: #10B981;">The Retrained Robust Model (3,187 Windows)</h3>
+    <ul>
+      <li>Expanded dataset by <strong>9.5×</strong>: 8.87 million requests across diverse temporal regimes.</li>
+      <li>Injected chaotic burst noise, randomized sleep intervals, and varying botnet intensities.</li>
+      <li><strong>Flawless Production Generalization:</strong> Restored recall to a perfect <strong>1.0000</strong> on the chaotic blind test.</li>
+      <li><strong>Academic Takeaway:</strong> Proves that lightweight sequence models require chaotic diversity, not just parameter volume.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Note:
+Now, I want to share the most pivotal and humbling scientific discovery of this thesis: what I call "The 74% Recall Collapse."
+Early in the research, we trained our initial TCN on a standard synthetic dataset of 335 time windows—about an hour of simulated traffic. In laboratory testing, it looked phenomenal: 98% precision, 100% recall.
+We felt confident. But then, we subjected this model to an unseen, chaotic blind test where the botnet randomized its burst patterns and injected sleep jitters.
+The result was devastating: recall crashed to 74%. In security terms, one out of every four attack waves walked right past our AI defense!
+Why? Because the model had overfit to uniform attack rhythms.
+This forced us to overhaul our entire data generation pipeline. We expanded training by nearly 10-fold to 3,187 windows, exposing the model to chaotic, multi-intensity dynamics. As you see on the chart, the retrained model conquered the blind test, restoring empirical recall to 1.0000.
+-->
+
+---
+
+<!-- SLIDE 12 -->
+<span class="tag">Blind Evaluation Suite 1</span> <span class="time-badge">Target: 13:30 - 14:45</span>
+
+# Stress-Testing Resilience: Surviving the 154-Minute Chaotic Blind Test
+## Subjecting the Model to Dynamic, Multi-Stage Stealth Botnet Attacks
+
+![w:1050 center](assets/v2_chaotic_traffic_timeseries.png)
+
+<div class="card-grid-3">
+  <div class="card">
+    <h3>Chaotic Attack Dynamics</h3>
+    <p>Adversaries rotate attack velocity every 15 minutes, toggling between low-frequency whispers, sudden surges, and deceptive quiet periods.</p>
+  </div>
+  <div class="card">
+    <h3>Temporal Tracking</h3>
+    <p>The TCN probability score (blue curve) closely hugs ground-truth attack windows (red bands), achieving immediate zero-day reactivity.</p>
+  </div>
+  <div class="card">
+    <h3>Zero False Alarms</h3>
+    <p>During normal human traffic periods (white intervals), prediction scores remain pinned near 0.0, preventing customer disruption.</p>
+  </div>
+</div>
+
+<div class="card-grid" style="margin-top: 10px;">
+  <div class="card" style="text-align: center;"><div class="metric-val" style="color: #10B981;">1.0000</div><div class="metric-label">Blind Test Recall (100% Detected)</div></div>
+  <div class="card" style="text-align: center;"><div class="metric-val" style="color: #38BDF8;">0.9310</div><div class="metric-label">Blind Test F1-Score</div></div>
+</div>
+
+<!-- Note:
+Let us examine the chaotic blind test results in detail.
+On this time-series graph, the red vertical bands represent periods of active botnet attack, while the white regions are pure human traffic. The blue line is our model's predicted probability of attack.
+Notice the sharp transitions. The botnet varied its intensity wildly—switching from slow background stuffing to sudden coordinated bursts, and then pausing completely to trick the rate limiter.
+Look at how our TCN responds: the moment the attack phase begins, the probability spikes cleanly past the detection threshold. More importantly, when the attack ceases, the score drops straight back to baseline zero.
+It achieved a perfect 1.0000 recall across this test, proving it cannot be fooled by rhythmic manipulation or quiet periods.
+-->
+
+---
+
+<!-- SLIDE 13 -->
+<span class="tag">Blind Evaluation Suite 2</span> <span class="time-badge">Target: 14:45 - 16:00</span>
+
+# Enterprise Scale: Sustained 233-Hour Validation Across 33.7M Requests
+## Validating Production Durability Across Diverse Real-World Operating Regimes
+
+![w:1000 center](assets/v2_performance_across_datasets.png)
+
+<div class="card-grid-3">
+  <div class="card">
+    <h3>Original Validation Split</h3>
+    <p><strong>Volume:</strong> 2.2M requests (26.6 hrs)<br>
+    <strong>Precision:</strong> 1.0000<br>
+    <strong>Recall:</strong> 0.9981<br>
+    <strong>F1-Score:</strong> 0.9990</p>
+  </div>
+  <div class="card">
+    <h3>Chaotic Blind Test (Unseen)</h3>
+    <p><strong>Volume:</strong> 5.2M requests (154 mins)<br>
+    <strong>Precision:</strong> 0.8710<br>
+    <strong>Recall:</strong> 1.0000<br>
+    <strong>F1-Score:</strong> 0.9310</p>
+  </div>
+  <div class="card">
+    <h3>Long-Horizon Enterprise Suite</h3>
+    <p><strong>Volume:</strong> 26.3M requests (233 hrs)<br>
+    <strong>Precision:</strong> 0.9996<br>
+    <strong>Recall:</strong> 1.0000<br>
+    <strong>F1-Score:</strong> 0.9998</p>
+  </div>
+</div>
+
+<div class="success-box" style="margin-top: 10px;">
+  <p style="color: #F8FAFC; margin: 0;"><strong>Flawless Enterprise Defense:</strong> In a continuous 10-day enterprise simulation encompassing 33,700,000 authentication attempts, the TCN model intercepted <strong>every single attack window</strong> without dropping a single legitimate user session.</p>
+</div>
+
+<!-- Note:
+To satisfy the highest standards of enterprise engineering, we expanded our evaluation to an unprecedented scale: 233 continuous hours of simulated enterprise telemetry, totaling 33.7 million requests.
+As shown in the comparative bar charts across our three evaluation tiers:
+On the original validation split, the model achieved a 0.9990 F1-score.
+On the highly hostile chaotic blind test, it maintained 1.0000 recall with an F1-score of 0.9310.
+And across the massive 26.3-million-request enterprise suite, it achieved 0.9996 precision and a flawless 1.0000 recall.
+This proves that the system's defensive efficacy is not an artifact of small test sets; it scales seamlessly to enterprise traffic volumes.
+-->
+
+---
+
+<!-- SLIDE 14 -->
+<span class="tag">Operational Tuning</span> <span class="time-badge">Target: 16:00 - 17:15</span>
+
+# Precision Engineering: Threshold Tuning & Zero-Alarm Operations
+## Optimizing the Operating Point for Zero Enterprise Business Disruption
+
+![w:1000 center](assets/v2_confusion_matrices.png)
+
+<div class="card-grid">
+  <div class="card">
+    <h3>Confusion Matrix Analysis</h3>
+    <ul>
+      <li><strong>True Negatives:</strong> 838 / 842 normal windows correctly classified (99.5% operational specificity).</li>
+      <li><strong>False Positives:</strong> Only 4 borderline windows flagged across 154 minutes of extreme volatility.</li>
+      <li><strong>False Negatives:</strong> <strong>Exactly ZERO (0 FN).</strong> Not a single attack window bypassed the defense.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Dual-Threshold Operating Policy</h3>
+    <ul>
+      <li><strong>$\tau_{\text{block}} = 0.85$: Hard Blocking.</strong> Reserved for high-confidence bot clusters; drops traffic or returns HTTP 403.</li>
+      <li><strong>$\tau_{\text{challenge}} = 0.50$: Soft Tarpitting / PoW.</strong> Injects 200ms latency or requests Proof-of-Work challenge, neutralizing false-positive business risk.</li>
+      <li><strong>Zero Friction for Users:</strong> Clean human logins never experience interstitial challenges.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Note:
+In production cybersecurity, the cost of false positives is severe: locking out legitimate customers translates directly to lost revenue and executive escalations.
+Let's inspect our confusion matrix on the left.
+Across the chaotic blind test, the model produced exactly ZERO false negatives. Every single botnet wave was captured.
+Meanwhile, it generated only 4 false positives out of 842 normal windows—a specificity of 99.5%.
+To eliminate even that tiny business risk, we engineered a dual-threshold operational policy.
+If the model score exceeds 0.85, we issue hard blocks.
+If the score sits between 0.50 and 0.85, we do not block! Instead, we apply 'tarpitting'—artificially delaying response times by 200ms—or issue a lightweight cryptographic Proof-of-Work challenge.
+To an attacker running 10,000 threads, latency destroys their throughput. To a human user, a 200ms delay is imperceptible.
+-->
+
+---
+
+<!-- SLIDE 15 -->
+<span class="tag">Production Feasibility</span> <span class="time-badge">Target: 17:15 - 18:15</span>
+
+# Production Breakthrough: 0.65ms Inline CPU Inference (No GPUs Needed)
+## Engineering Sub-Millisecond Deep Learning for Real-Time Gateway Filters
+
+![w:1000 center](assets/v2_latency_profile.png)
+
+<div class="card-grid-3">
+  <div class="card">
+    <div class="metric-val">0.65 ms</div>
+    <div class="metric-label">Mean CPU Inference</div>
+    <p style="margin-top: 6px;">Consistently runs in &lt;1% of standard 100ms API authentication budget.</p>
+  </div>
+  <div class="card">
+    <div class="metric-val">0.82 ms</div>
+    <div class="metric-label">p99 Tail Latency</div>
+    <p style="margin-top: 6px;">Extremely tight distribution; zero tail-latency jitter under burst load.</p>
+  </div>
+  <div class="card">
+    <div class="metric-val">$0.00</div>
+    <div class="metric-label">GPU Infrastructure Cost</div>
+    <p style="margin-top: 6px;">Executes on commodity x86_64 / ARM64 cloud CPUs alongside Envoy.</p>
+  </div>
+</div>
+
+<div class="card" style="margin-top: 10px;">
+  <p style="margin: 0; font-size: 0.88rem;"><strong>DevOps Feasibility:</strong> Standard AI models require dedicated GPU clusters costing thousands of dollars per month and introducing network hop latency. Our 28k-parameter TCN compiles directly via ONNX / TorchScript into an Envoy WebAssembly (Wasm) or sidecar filter, processing <strong>1,500 sequences/second per CPU core</strong>.</p>
+</div>
+
+<!-- Note:
+Many brilliant machine learning architectures fail the reality test of DevOps and cloud engineering. They require massive GPU clusters, cost tens of thousands of dollars per month, and add 50 milliseconds of network overhead.
+We designed this system from the ground up for production viability.
+As demonstrated in our empirical latency profiling on this slide, our model executes in an average of 0.65 milliseconds on a single standard server CPU core. Even at the 99th percentile, latency never exceeds 0.82 milliseconds.
+Consider what that means: standard password hashing with bcrypt takes 50 to 100 milliseconds. Our model uses less than 1% of that authentication time budget.
+It requires zero GPUs, runs on commodity hardware, and can be embedded directly into an Envoy proxy or NGINX gateway as a C++ or WebAssembly filter.
+-->
+
+---
+
+<!-- SLIDE 16 -->
+<span class="tag">DevOps & Production Hardening</span> <span class="time-badge">Target: 18:15 - 19:15</span>
+
+# Operational Hardening: Residential Proxies, Drift & Continuous Retraining
+## Addressing Adversarial Adaptation, TLS 1.3/ECH, and Concept Drift
+
+<div class="card-grid">
+  <div class="card">
+    <h3>Adversarial Countermeasures</h3>
+    <ul>
+      <li><strong>Proxy Churn:</strong> Attackers renting 50,000 residential nodes are neutralized because our model tracks cross-IP entropy and TLS invariants, not static IP reputation.</li>
+      <li><strong>Cipher Stunting & JA3 Spoofing:</strong> Randomizing cipher suites collapses TLS handshakes or generates aberrant extension permutations that increase entropy anomaly scores.</li>
+      <li><strong>TLS 1.3 & ECH (Encrypted Client Hello):</strong> Core cipher preferences and supported group extensions remain unencrypted in Initial Client Hello, preserving cryptographic ground truth.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Automated MLOps Retraining Loop</h3>
+    <ul>
+      <li><strong>Telemetry Shadowing:</strong> Live gateway traffic streams asynchronously to Apache Kafka / Vector for zero-overhead logging.</li>
+      <li><strong>Drift Detection:</strong> Population Stability Index (PSI) monitors feature distribution shifts (e.g., major Chrome or iOS version updates).</li>
+      <li><strong>Canary Retraining:</strong> Automated pipelines retrain models on weekly windows, deploying via shadow canaries with zero downtime.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- Note:
+In cybersecurity, no defense is static. We must anticipate how adversaries will adapt.
+What if attackers use tools like curl-impersonate to spoof browser fingerprints? To spoof completely, the bot must emulate the entire browser rendering engine, which drastically increases their hardware and memory costs, undermining the economics of credential stuffing. If they randomize ciphers, that creates "cipher stunting," which spikes the Shannon entropy and triggers our anomaly detectors immediately.
+What about TLS 1.3 and Encrypted Client Hello? Even under TLS 1.3, the unencrypted outer Client Hello still negotiates mandatory cipher suites and supported groups, preserving our feature extraction.
+Finally, we engineered an MLOps lifecycle: Kafka streams telemetry into cold storage, drift detection monitors for new browser versions, and canary deployments allow retraining without downtime.
+-->
+
+---
+
+<!-- SLIDE 17 -->
+<span class="tag">Conclusions & Strategic Impact</span> <span class="time-badge">Target: 19:15 - 20:00</span>
+
+# Conclusion: The Future of API Perimeter Defense
+## Summary of Key Contributions & Strategic Value
+
+<div class="card-grid-3">
+  <div class="card">
+    <div class="metric-val" style="color: #10B981;">100%</div>
+    <div class="metric-label">Empirical Detection</div>
+    <p style="margin-top: 8px;">1.0000 recall on chaotic blind tests, completely eliminating the perimeter blind spot of static rate limiters.</p>
+  </div>
+  <div class="card">
+    <div class="metric-val" style="color: #38BDF8;">0.65 ms</div>
+    <div class="metric-label">Production Efficiency</div>
+    <p style="margin-top: 8px;">Sub-millisecond CPU inference allows seamless, cost-effective inline deployment without specialized GPU infrastructure.</p>
+  </div>
+  <div class="card">
+    <div class="metric-val" style="color: #A855F7;">28,241</div>
+    <div class="metric-label">Compact Parameters</div>
+    <p style="margin-top: 8px;">Lightweight TCN sequence architecture prevents overfitting and guarantees zero future information leakage.</p>
+  </div>
+</div>
+
+<div class="card" style="margin-top: 15px;">
+  <h3>Summary of Academic & Engineering Contributions</h3>
+  <ol>
+    <li><strong>Defensive Paradigm Shift:</strong> Proved that distributed, low-and-slow residential botnets can be intercepted by combining transport-layer cryptographic invariants with temporal sequence modeling.</li>
+    <li><strong>The Overfitting Insight:</strong> Uncovered the 74% recall collapse mechanism on small datasets, demonstrating the absolute necessity of chaotic burst diversity in security training.</li>
+    <li><strong>Open Cyber-Range Benchmark:</strong> Created a reproducible, 33.7M-request benchmark dataset simulating realistic low-and-slow credential stuffing for future cybersecurity researchers.</li>
+  </ol>
+</div>
+
+<!-- Note:
+To conclude, this thesis delivers three core contributions:
+First, we solved the perimeter blind spot. We demonstrated that low-and-slow credential stuffing across thousands of residential IPs can be neutralized with 1.0000 recall by anchoring detection in cryptographic TLS invariants and temporal sequence modeling.
+Second, we identified the 74% Recall Collapse, demonstrating that lightweight neural networks in security require chaotic data diversity rather than naive parameter scaling.
+And third, we proved that deep learning defense can be deployed in the real world: running in 0.65 milliseconds on standard server CPUs without requiring expensive GPU clusters.
+We have transformed API perimeter security from a brittle collection of static counters into an adaptive, cognitive barrier.
+-->
+
+---
+
+<!-- SLIDE 18 -->
+<span class="tag">Defense & Academic Discussion</span> <span class="time-badge">Target: 20:00+ (Q&A)</span>
+
+# Self-Learning Systems
+## Securing API login endpoints against “low and slow” botnet credential stuffing using self-learning systems
+
+<br>
+
+<div class="card-grid">
+  <div class="card">
+    <h3>Candidate & Defense Summary</h3>
+    <p><strong>Adrian Chia</strong><br>
+    Master of Science in Cybersecurity & Digital Security<br>
+    <strong>Keywords:</strong> Temporal Convolutional Networks, TLS Fingerprinting, Low-and-Slow Botnets, API Gateway Security, Zero-Leakage Time-Series.</p>
+    <div class="success-box" style="margin-top: 15px;">
+      <p style="color: #F8FAFC; margin: 0;"><strong>Artifacts Available:</strong> Complete reproducible PyTorch codebase, ONNX models, synthetic cyber-range generators, and full 33.7M request evaluation logs.</p>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Key Committee Discussion Areas</h3>
+    <ul>
+      <li><strong>Architectural Mechanics:</strong> TCN receptive field geometry vs Transformer self-attention.</li>
+      <li><strong>Adversarial Robustness:</strong> Countering JA3 spoofing and TLS 1.3 / ECH encryption.</li>
+      <li><strong>Data Pipeline:</strong> Preventing temporal leakage and scaling to 100k req/s.</li>
+      <li><strong>MLOps Lifecycle:</strong> Threshold tuning, tarpitting policies, and online model drift retraining.</li>
+    </ul>
+  </div>
+</div>
+
+<br>
+<p style="text-align: center; color: #38BDF8; font-size: 1.1rem; font-weight: bold;">
+  I welcome questions, critiques, and discussion from the Examination Committee.
+</p>
+
+<!-- Note:
+Thank you very much for your time, attention, and consideration.
+This concludes my presentation on "Self-learning systems - Securing API login endpoints against 'low and slow' botnet credential stuffing using self-learning systems."
+I am now ready to take your questions and engage in academic discussion.
+-->

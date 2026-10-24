@@ -1,0 +1,20 @@
+2026-09-30 19:12:02.962 | INFO     | __main__:<module>:22 - Initializing PowerPoint generator for Master's thesis presentation
+2026-09-30 19:12:02.968 | INFO     | __main__:build_presentation:140 - Building Slide 1: Title & Hook
+2026-09-30 19:12:02.975 | INFO     | __main__:build_presentation:205 - Building Slide 2: Threat Evolution
+2026-09-30 19:12:02.978 | INFO     | __main__:build_presentation:291 - Building Slide 3: The Perimeter Blind Spot
+2026-09-30 19:12:03.008 | INFO     | __main__:build_presentation:311 - Building Slide 4: The Paradigm Shift
+2026-09-30 19:12:03.010 | INFO     | __main__:build_presentation:393 - Building Slide 5: TLS Handshake Invariants
+2026-09-30 19:12:03.014 | INFO     | __main__:build_presentation:457 - Building Slide 6: End-to-End Pipeline
+2026-09-30 19:12:03.017 | INFO     | __main__:build_presentation:478 - Building Slide 7: Algorithmic Selection
+2026-09-30 19:12:03.020 | INFO     | __main__:build_presentation:566 - Building Slide 8: Inside the TCN Architecture
+2026-09-30 19:12:03.023 | INFO     | __main__:build_presentation:588 - Building Slide 9: The Realistic Cyber-Range
+2026-09-30 19:12:03.026 | INFO     | __main__:build_presentation:652 - Building Slide 10: Data Engineering & Labeling
+2026-09-30 19:12:03.029 | INFO     | __main__:build_presentation:718 - Building Slide 11: The Overfitting Trap
+2026-09-30 19:12:03.033 | INFO     | __main__:build_presentation:786 - Building Slide 12: Chaotic Burst Blind Test
+2026-09-30 19:12:03.036 | INFO     | __main__:build_presentation:850 - Building Slide 13: Sustained Enterprise Scale
+2026-09-30 19:12:03.040 | INFO     | __main__:build_presentation:912 - Building Slide 14: Precision Engineering
+2026-09-30 19:12:03.043 | INFO     | __main__:build_presentation:972 - Building Slide 15: Production Feasibility
+2026-09-30 19:12:03.046 | INFO     | __main__:build_presentation:1029 - Building Slide 16: Operational Hardening
+2026-09-30 19:12:03.049 | INFO     | __main__:build_presentation:1109 - Building Slide 17: Conclusion
+2026-09-30 19:12:03.055 | INFO     | __main__:build_presentation:1181 - Building Slide 18: Q&A
+2026-09-30 19:12:03.128 | INFO     | __main__:build_presentation:1274 - Successfully generated PowerPoint presentation at /Users/adrian/code/Research/presentation/slides.pptx
